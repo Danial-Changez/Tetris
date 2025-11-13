@@ -1,0 +1,121 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Nov 13 11:59:56 2025
+| Host         : Danials-Laptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file tetris_top_control_sets_placed.rpt
+| Design       : tetris_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    43 |
+|    Minimum number of control sets                        |    43 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   179 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    43 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    26 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |             379 |          212 |
+| No           | Yes                   | No                     |            1186 |          770 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1799 |          657 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                    Enable Signal                    |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|  clk_sys     |                                                     |                                                  |                1 |              1 |         1.00 |
+|  clk_sys     | u_tetris_game/clear_col_idx[3]_i_1_n_0              | u_tetris_game/i_rst0                             |                2 |              4 |         2.00 |
+|  clk_sys     | u_tetris_game/o_hold_shape[2]_i_1_n_0               | u_tetris_game/i_rst0                             |                1 |              4 |         4.00 |
+|  clk_sys     | u_tetris_game/shift_col_idx[3]_i_1_n_0              | u_tetris_game/i_rst0                             |                2 |              4 |         2.00 |
+|  clk_sys     | u_tetris_game/lock_cell_idx                         | u_tetris_game/i_rst0                             |                3 |              4 |         1.33 |
+|  clk_sys     | u_tetris_game/clear_row_idx[4]_i_1_n_0              | u_tetris_game/i_rst0                             |                2 |              5 |         2.50 |
+|  clk_sys     | u_tetris_game/shift_row_idx[4]_i_1_n_0              | u_tetris_game/i_rst0                             |                2 |              5 |         2.50 |
+|  clk_sys     | u_tetris_game/active_y_stage[5]_i_1_n_0             | u_tetris_game/i_rst0                             |                2 |              6 |         3.00 |
+|  clk_sys     | u_tetris_game/action_pending                        | u_tetris_game/i_rst0                             |                4 |              6 |         1.50 |
+|  clk_sys     | u_tetris_game/o_active_y[5]_i_1_n_0                 | u_tetris_game/i_rst0                             |                2 |              6 |         3.00 |
+|  clk_sys     | u_tetris_game/hold_shape_stage[2]_i_1_n_0           | u_tetris_game/i_rst0                             |                3 |              7 |         2.33 |
+|  clk_sys     | u_clock_divider/o_pixel_ce_reg_0[0]                 | u_tetris_ui_overlay/rst_sync                     |                3 |             10 |         3.33 |
+|  clk_sys     | u_tetris_game/lock_mask_pending[13]_i_1_n_0         | u_tetris_game/i_rst0                             |                3 |             11 |         3.67 |
+|  clk_sys     | u_tetris_game/lock_x_pending                        | u_tetris_game/i_rst0                             |                5 |             11 |         2.20 |
+|  clk_sys     | u_tetris_game/active_x_stage[4]_i_1_n_0             | u_tetris_game/i_rst0                             |                5 |             12 |         2.40 |
+|  clk_sys     | u_tetris_game/E[0]                                  | u_tetris_ui_overlay/rst_sync                     |                3 |             12 |         4.00 |
+|  clk_sys     | u_tetris_game/active_mask_stage                     | u_tetris_game/i_rst0                             |                9 |             13 |         1.44 |
+|  clk_sys     |                                                     | u_input_controller/db_hard/r_cnt[0]_i_1__3_n_0   |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_left/r_cnt[0]_i_1_n_0      |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_right/r_cnt[0]_i_1__0_n_0  |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_rotate/r_cnt[0]_i_1__1_n_0 |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_pause/r_cnt[0]_i_1__5_n_0  |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_soft/r_cnt[0]_i_1__2_n_0   |                5 |             17 |         3.40 |
+|  clk_sys     |                                                     | u_input_controller/db_swap/r_cnt[0]_i_1__4_n_0   |                5 |             17 |         3.40 |
+|  clk_sys     | u_tetris_game/lock_y_reg[5]_i_1_n_0                 | u_tetris_game/i_rst0                             |                6 |             22 |         3.67 |
+|  clk_sys     | u_tetris_game/active_mask_reg                       | u_tetris_game/i_rst0                             |               13 |             23 |         1.77 |
+|  clk_sys     | u_tetris_game/high_score_pipe_value                 | u_tetris_game/i_rst0                             |                8 |             27 |         3.38 |
+|  clk_sys     | u_tetris_game/o_score[15]_i_1_n_0                   | u_tetris_game/i_rst0                             |                5 |             27 |         5.40 |
+|  clk_sys     | u_tetris_game/score_pipe_value                      | u_tetris_game/i_rst0                             |                5 |             27 |         5.40 |
+|  clk_sys     | u_tetris_game/o_high_score[15]_i_1_n_0              | u_tetris_game/i_rst0                             |                7 |             27 |         3.86 |
+|  clk_sys     | u_tetris_game/O3039[0]                              | u_tetris_ui_overlay/rst_sync                     |                8 |             27 |         3.38 |
+|  clk_sys     | u_tetris_game/global_high_score_reg[1][15]_i_3_0[0] | u_tetris_ui_overlay/rst_sync                     |               10 |             27 |         2.70 |
+|  clk_sys     | u_tetris_game/global_high_score_reg[0][15]_i_1_0[0] | u_tetris_ui_overlay/rst_sync                     |                7 |             27 |         3.86 |
+|  clk_sys     | u_clock_divider/E[0]                                | u_tetris_ui_overlay/rst_sync                     |                8 |             34 |         4.25 |
+|  clk_sys     | u_tetris_game/o_board_flat[199]_i_1_n_0             | u_tetris_game/i_rst0                             |               67 |            200 |         2.99 |
+|  clk_sys     | u_tetris_game/board_pipe[199]_i_1_n_0               | u_tetris_game/i_rst0                             |               61 |            200 |         3.28 |
+|  clk_sys     |                                                     | u_tetris_game/i_rst0                             |              153 |            230 |         1.50 |
+|  clk_sys     | u_input_controller/FSM_sequential_ui_state_reg[2]_2 | u_tetris_ui_overlay/rst_sync                     |               96 |            249 |         2.59 |
+|  clk_sys     | u_input_controller/pause_index_reg[1][0]            | u_tetris_ui_overlay/rst_sync                     |              103 |            254 |         2.47 |
+|  clk_sys     | u_input_controller/pause_index_reg[0][0]            | u_tetris_ui_overlay/rst_sync                     |               97 |            254 |         2.62 |
+|  clk_sys     | u_input_controller/E[0]                             | u_tetris_ui_overlay/rst_sync                     |              105 |            254 |         2.42 |
+|  clk_sys     |                                                     | u_tetris_ui_overlay/rst_sync                     |              163 |            420 |         2.58 |
+|  clk_sys     |                                                     | u_vga_timing/SR[0]                               |              631 |            796 |         1.26 |
++--------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+
+
