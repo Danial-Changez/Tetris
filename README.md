@@ -50,7 +50,7 @@ Seven buttons are shared between UI navigation and gameplay. Left/right move the
 
 [![FPGA Demo](./media/20251112_220539.jpg)](https://1drv.ms/v/c/c0bd53a8fde474dd/IQRdmt2g7RSzT7IHAfDmXShoAXsZB-yzDDrzmtwfhyPqXlI?width=3840&height=2160)
 
-Here is a live demo of navigating the UI and gameplay with the controller.
+Here is a live demo of navigating the UI and gameplay with the controller. You can view screenshots of the menus under the `media` directory.
 
 ## Key Features
 
@@ -114,6 +114,8 @@ Here is a live demo of navigating the UI and gameplay with the controller.
 | Timing      | WNS = 0.289 ns, TNS = 0 ns, WHS = 0.039 ns, THS = 0 ns, WPWS = 3 ns, TPWS = 0 ns | `tetris_top_timing_summary_routed.rpt` |
 | Utilization | 10,590 LUT (16.7%), 3,365 FF (2.7%), 0 BRAM, 0 DSP, 26 IOB, 1 MMCM, 2 BUFG       | `tetris_top_utilization_placed.rpt`    |
 | Power       | 0.263 W total (0.165 W dynamic + 0.098 W static)                                 | `tetris_top_power_routed.rpt`          |
+
+To see the full reports, please refer to the `docs` directory.
 
 ---
 
