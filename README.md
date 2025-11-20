@@ -37,14 +37,14 @@ FPGA Tetris for the Digilent Nexys A7-100T with a custom UI/render pipeline in V
 
 Seven buttons are shared between UI navigation and gameplay. Left/right move the tetromino, hard drop slams it to the floor, and soft drop speeds fall while held. The pause button is purely used to save game state and exit to the main menu.
 
-| Action                | Nexys BTN     | PMOD JA        | Notes                                                            |
-| --------------------- | ------------- | -------------- | ---------------------------------------------------------------- |
-| Left/Right (◀️/▶️)    | BTN_L / BTN_R | JA1 / JA2      | Also scrolls menu entries when gameplay is paused.               |
-| Soft Drop  (🔼)       | BTN_C         | JA3            | Only input with auto-repeat; doubles as "up" in menus.           |
-| Hard Drop  (🔽)       | BTN_D         | JA4            | Drops instantly; doubles as "down" in menus.                     |
-| Pause      (⏸️)       | -             | JA7 (or BTN_C) | Opens pause menu with Resume / Save Slot 1-3 / Main Menu.        |
-| Rotate     (🅰️)       | BTN_U         | JA8            | Confirms menu selections, loads saves, restarts after game over. |
-| Hold       (🅱️)       | -             | JA9            | Swaps active/hold pieces and cancels menu dialogs.               |
+| Action                | PMOD JA        | Notes                                                            |
+| --------------------- | -------------- | ---------------------------------------------------------------- |
+| Left/Right (◀️/▶️)    | JA1 / JA2      | Also scrolls menu entries when gameplay is paused.               |
+| Soft Drop  (🔼)       | JA3            | Only input with auto-repeat; doubles as "up" in menus.           |
+| Hard Drop  (🔽)       | JA4            | Drops instantly; doubles as "down" in menus.                     |
+| Pause      (⏸️)       | JA7 (or BTN_C) | Opens pause menu with Resume / Save Slot 1-3 / Main Menu.        |
+| Rotate     (🅰️)       | JA8            | Confirms menu selections, loads saves, restarts after game over. |
+| Hold       (🅱️)       | JA9            | Swaps active/hold pieces and cancels menu dialogs.               |
 
 ## Demo
 
